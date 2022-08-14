@@ -65,3 +65,24 @@ document.querySelector(".again").addEventListener("click", function () {
 
   document.querySelector("body").style.backgroundColor = "#000";
 });
+//=====================modal=================================//
+
+const modalBtn = document.querySelector('.show-modal')
+const modal = document.querySelector('.modal')
+const overlay = document.querySelector('.overlay')
+const closeBtn = document.querySelector('.close-modal')
+
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+modalBtn.addEventListener('click', openModal);
+
+closeBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
